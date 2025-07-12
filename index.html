@@ -77,6 +77,45 @@
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="text" name="email" id="email" />
+
+											<form method="post" action="send_email.php">
+											<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and validate form input
+    $name = strip_tags(trim($_POST["name"] ?? ''));
+    $email = filter_var(trim($_POST["email"] ?? ''), FILTER_VALIDATE_EMAIL);
+    $message = strip_tags(trim($_POST["message"] ?? ''));
+
+    if (!$email) {
+        echo "Invalid email address.";
+        exit;
+    }
+    if (empty($name) || empty($message)) {
+        echo "Please fill in all fields.";
+        exit;
+    }
+
+    $to = $email; // send to email entered in the form
+    $subject = "Message from your website";
+
+    // Compose email body
+    $email_body = "You have received a new message from your website contact form.\n\n";
+    $email_body .= "Name: $name\n";
+    $email_body .= "Email: $email\n\n";
+    $email_body .= "Message:\n$message\n";
+
+    $headers = "From: no-reply@yoursite.com\r\n";  // Change this to your domain's email
+    $headers .= "Reply-To: $email\r\n";
+
+    if (mail($to, $subject, $email_body, $headers)) {
+        echo "Email sent successfully to $email";
+    } else {
+        echo "Failed to send email.";
+    }
+} else {
+    echo "Invalid request method.";
+}
+?>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
