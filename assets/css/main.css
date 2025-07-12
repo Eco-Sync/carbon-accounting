@@ -29,34 +29,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-body {
-  /* Light green base */
-  background-color: #d4edda; /* soft pastel light green */
 
-  /* Dark green overlay gradient */
-  background-image: 
-    linear-gradient(
-      rgba(0, 50, 0, 0.6),  /* dark green with some transparency */
-      rgba(0, 80, 0, 0.8)
-    ),
-    linear-gradient(
-      135deg, 
-      #c6f0b4 25%,  /* lighter green */
-      #a1d38d 50%,  /* medium green */
-      #6ba048 75%   /* dark green */
-    );
-
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  color: #f0f7f0; /* light text color for contrast */
-}
-
-
-body {
-	line-height: 1;
-}
 
 ol, ul {
 	list-style: none;
