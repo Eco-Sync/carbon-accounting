@@ -1333,12 +1333,32 @@ input, select, textarea {
 				line-height: 2;
 			}
 
-	#header nav ul li a {
+	#header nav ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;            /* fixed width */
-  height: 40px;
+  justify-content: center;  /* center all nav items */
+  gap: 1rem;                /* space between boxes */
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#header nav ul li {
+  padding: 0;
+  margin: 0;
+  border-left: none;        /* remove borders for cleaner look */
+}
+
+#header nav ul li:first-child {
+  border-left: none;
+}
+
+#header nav ul li a {
+  display: flex;
+  justify-content: center;   /* center text horizontally */
+  align-items: center;       /* center text vertically */
+  width: 150px;              /* fixed equal width for all boxes */
+  height: 40px;              /* fixed height */
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
@@ -1346,15 +1366,24 @@ input, select, textarea {
   border: 1px solid white;
   border-radius: 4px;
   background: none;
-  padding: 0 10px;          /* optional horizontal padding */
+  padding: 0 10px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
-  white-space: nowrap;      /* prevent wrapping */
+  white-space: nowrap;       /* prevent text wrapping */
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;   /* add "..." if text too long */
 }
+
+#header nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#header nav ul li a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 		body.is-article-visible #header {
 			-moz-transform: scale(0.95);
