@@ -1335,38 +1335,41 @@ input, select, textarea {
 
 		#header nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center all nav items */
-  align-items: center;
-  gap: 1rem; /* Space between boxes */
+  flex-wrap: wrap;          /* Wrap to multiple lines if needed */
+  justify-content: center;  /* Center all nav items horizontally */
+  gap: 1rem;                /* Space between boxes */
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1000px;        /* Optional max width */
 }
 
+/* Reset default styles on LI */
 #header nav ul li {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
+/* The clickable boxes */
 #header nav ul li a {
-  display: flex;
-  justify-content: center; /* Center text horizontally */
-  align-items: center;     /* Center text vertically */
-  min-width: 8rem;
-  height: 3rem;
+  display: flex;              /* Flexbox to center text */
+  justify-content: center;    /* Horizontal center */
+  align-items: center;        /* Vertical center */
+  min-width: 120px;           /* Fixed width for all */
+  height: 50px;               /* Fixed height for all */
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   border: 1px solid white;
-  border-radius: 4px;
+  border-radius: 6px;
   background: none;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
+/* Hover effects */
 #header nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
