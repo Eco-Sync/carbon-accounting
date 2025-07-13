@@ -1333,28 +1333,30 @@ input, select, textarea {
 				line-height: 2;
 			}
 
-		#header nav ul {
+			#header nav ul {
   display: flex;
-  justify-content: center;  /* center all nav items horizontally */
-  gap: 1rem;                /* space between boxes */
+  flex-wrap: wrap;
+  justify-content: center; /* Center all nav items */
+  align-items: center;
+  gap: 1rem; /* Space between boxes */
+  list-style: none;
   padding: 0;
   margin: 0 auto;
-  list-style: none;
-  max-width: 900px;         /* optional max width */
-  flex-wrap: wrap;          /* wrap if needed */
+  max-width: 1000px;
 }
 
 #header nav ul li {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 #header nav ul li a {
-  display: flex;            /* flex container for centering */
-  justify-content: center;  /* horizontal center */
-  align-items: center;      /* vertical center */
-  width: 130px;             /* fixed width for same box size */
-  height: 40px;             /* fixed height */
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center;     /* Center text vertically */
+  min-width: 8rem;
+  height: 3rem;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
@@ -1362,9 +1364,6 @@ input, select, textarea {
   border: 1px solid white;
   border-radius: 4px;
   background: none;
-  padding: 0;               /* remove default padding */
-  text-align: center;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
