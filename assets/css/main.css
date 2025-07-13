@@ -1335,41 +1335,39 @@ input, select, textarea {
 
 		#header nav ul {
   display: flex;
-  flex-wrap: wrap;          /* Wrap to multiple lines if needed */
-  justify-content: center;  /* Center all nav items horizontally */
-  gap: 1rem;                /* Space between boxes */
-  list-style: none;
+  justify-content: center;  /* center all nav items horizontally */
+  gap: 1rem;                /* space between boxes */
   padding: 0;
   margin: 0 auto;
-  max-width: 1000px;        /* Optional max width */
+  list-style: none;
+  max-width: 900px;         /* optional max width */
+  flex-wrap: wrap;          /* wrap if needed */
 }
 
-/* Reset default styles on LI */
 #header nav ul li {
   margin: 0;
   padding: 0;
 }
 
-/* The clickable boxes */
 #header nav ul li a {
-  display: flex;              /* Flexbox to center text */
-  justify-content: center;    /* Horizontal center */
-  align-items: center;        /* Vertical center */
-  min-width: 120px;           /* Fixed width for all */
-  height: 50px;               /* Fixed height for all */
-  text-align: center;
+  display: flex;            /* flex container for centering */
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  width: 130px;             /* fixed width for same box size */
+  height: 40px;             /* fixed height */
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: white;
   border: 1px solid white;
-  border-radius: 6px;
+  border-radius: 4px;
   background: none;
-  transition: background-color 0.3s ease;
+  padding: 0;               /* remove default padding */
+  text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Hover effects */
 #header nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
