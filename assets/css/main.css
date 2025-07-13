@@ -1657,22 +1657,3 @@ input, select, textarea {
   margin: 0 auto; /* Center the container */
 }
 
-#main > article {
-  flex: 0 0 300px;       /* Fixed width */
-  height: 180px;         /* Fixed height */
-  display: flex;
-  justify-content: center; /* Center text horizontally */
-  align-items: center;     /* Center text vertically */
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
-#main > article:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
