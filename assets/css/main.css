@@ -1389,8 +1389,6 @@ input, select, textarea {
 			border-left: 0;
 		}
 
-
-
 		body.is-article-visible #header {
 			-moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
@@ -1661,13 +1659,4 @@ input, select, textarea {
 		}
 
 
-#main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center all boxes horizontally */
-  gap: 1.5rem; /* Space between boxes */
-  padding: 2rem 0;
-  max-width: 1000px; /* Optional: limits width */
-  margin: 0 auto; /* Center the container */
-}
 
